@@ -12,6 +12,9 @@ namespace PerfTests
             {
                 switch(args[0])
                 {
+                    case "/test02":
+                        selectedTest = typeof(Test02);
+                        break;
                     default:
                         selectedTest = typeof(Test01);
                         break;
