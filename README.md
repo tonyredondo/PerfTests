@@ -84,3 +84,17 @@ Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
 |            NormalComparison | 7,609.154 ns | 85.9316 ns | 80.3805 ns | 1.000 |
 | MemoryMarshallingComparison |   719.765 ns |  9.1830 ns |  8.5898 ns | 0.095 |
 |            **VectorComparison** |     1.627 ns |  0.0790 ns |  0.0700 ns | **0.000** |
+
+### Test06: Field Access vs Property Access
+```
+BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
+Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=2.2.101
+  [Host]     : .NET Core 2.2.0 (CoreCLR 4.6.27110.04, CoreFX 4.6.27110.04), 64bit RyuJIT
+  DefaultJob : .NET Core 2.2.0 (CoreCLR 4.6.27110.04, CoreFX 4.6.27110.04), 64bit RyuJIT
+```
+
+|         Method |      Mean |     Error |    StdDev |    Median | Ratio | RatioSD |
+|--------------- |----------:|----------:|----------:|----------:|------:|--------:|
+|    FieldAccess | 0.2976 ns | 0.0058 ns | 0.0099 ns | 0.2962 ns |  0.92 |    0.09 |
+| PropertyAccess | 0.3226 ns | 0.0116 ns | 0.0334 ns | 0.3050 ns |  1.00 |    0.00 |

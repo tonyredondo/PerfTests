@@ -27,6 +27,9 @@ namespace PerfTests
                     case "/test05":
                         selectedTest = typeof(Test05);
                         break;
+                    case "/test06":
+                        selectedTest = typeof(Test06);
+                        break;
                     default:
                         selectedTest = typeof(Test01);
                         break;
