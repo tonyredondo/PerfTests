@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 namespace PerfTests
 {
     [CoreJob(baseline: true)]
-    [RPlotExporter, RankColumn, MinColumn, MaxColumn, MemoryDiagnoser]
+    [RPlotExporter, RankColumn, MinColumn, MaxColumn]
     public class Test02
     {
         private ClassWithFactory _classWithFactory = new ClassWithFactory(() => new object());
