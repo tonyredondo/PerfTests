@@ -5,7 +5,7 @@ To run:
 dotnet run -c Release -- /{TestName}
 ```
 
-### Test01: Int array to byte stream
+## Test01: Int array to byte stream
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
@@ -24,7 +24,7 @@ Job=Core  Runtime=Core
 |           **PointerImplementation** | 0.0087 ns | 0.0001 ns | 0.0001 ns | 0.0085 ns | 0.0088 ns | **0.004** |    1 |           - |           - |           - |                   - |
 
 
-### Test02: Struct factory over Delegate factory
+## Test02: Struct factory over Delegate factory
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
@@ -39,7 +39,7 @@ Job=Core  Runtime=Core
 |       NormalClassWithFactory | 5.590 ns | 0.1841 ns | 0.1722 ns | 5.283 ns | 5.900 ns |  1.00 |    0.00 |    2 |
 | **NormalClassWithStructFactory** | 3.261 ns | 0.1339 ns | 0.1252 ns | 3.044 ns | 3.464 ns |  **0.58** |    0.03 |    1 |
 
-### Test03: Method calls
+## Test03: Method calls
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
@@ -57,7 +57,7 @@ Job=Core  Runtime=Core
 |        InterfaceCall | 2.6957 ns | 0.0266 ns | 0.0249 ns | 2.6645 ns | 2.7381 ns |  9.33 |    0.13 |    4 |
 |         AbstractCall | 2.3063 ns | 0.0295 ns | 0.0276 ns | 2.2660 ns | 2.3503 ns |  7.97 |    0.11 |    3 |
 
-### Test04: Matrix Row Access over Column Access (Data locality)
+## Test04: Matrix Row Access over Column Access (Data locality)
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
@@ -71,7 +71,7 @@ Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
 |    **RowAccess** |   118.8 ms | 11.99 ms | 16.41 ms |  **1.00** |    0.00 |
 | ColumnAccess | 2,197.1 ms | 14.75 ms | 13.80 ms | 18.54 |    2.07 |
 
-### Test05: Byte Array Comparison
+## Test05: Byte Array Comparison
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
@@ -85,7 +85,7 @@ Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
 | MemoryMarshallingComparison |   719.765 ns |  9.1830 ns |  8.5898 ns | 0.095 |
 |            **VectorComparison** |     1.627 ns |  0.0790 ns |  0.0700 ns | **0.000** |
 
-### Test06: Field Access vs Property Access
+## Test06: Field Access vs Property Access
 ```
 BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
 Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
