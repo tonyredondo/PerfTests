@@ -10,7 +10,7 @@ namespace PerfTests
             Type selectedTest = null;
             if (args != null && args.Length > 0)
             {
-                switch(args[0])
+                switch(args[0].ToLowerInvariant())
                 {
                     case "/test01":
                         selectedTest = typeof(Test01);
@@ -23,6 +23,9 @@ namespace PerfTests
                         break;
                     case "/test04":
                         selectedTest = typeof(Test04);
+                        break;
+                    case "/test05":
+                        selectedTest = typeof(Test05);
                         break;
                     default:
                         selectedTest = typeof(Test01);

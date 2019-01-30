@@ -1,6 +1,9 @@
 # PerfTests
-This repository contains some performance tests on c#
-
+This repository contains some performance tests on c#.
+```
+To run:
+dotnet run -c Release -- /{TestName}
+```
 
 ### Test01: Int array to byte stream
 ```
@@ -67,3 +70,17 @@ Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
 |------------- |-----------:|---------:|---------:|------:|--------:|
 |    **RowAccess** |   118.8 ms | 11.99 ms | 16.41 ms |  **1.00** |    0.00 |
 | ColumnAccess | 2,197.1 ms | 14.75 ms | 13.80 ms | 18.54 |    2.07 |
+
+### Test05: Byte Array Comparison
+```
+BenchmarkDotNet=v0.11.3, OS=Windows 10.0.17134.523 (1803/April2018Update/Redstone4)
+Intel Core i7-4770R CPU 3.20GHz (Haswell), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=2.2.101
+  [Host]     : .NET Core 2.2.0 (CoreCLR 4.6.27110.04, CoreFX 4.6.27110.04), 64bit RyuJIT
+  DefaultJob : .NET Core 2.2.0 (CoreCLR 4.6.27110.04, CoreFX 4.6.27110.04), 64bit RyuJIT
+```
+|                      Method |         Mean |      Error |     StdDev | Ratio |
+|---------------------------- |-------------:|-----------:|-----------:|------:|
+|            NormalComparison | 7,609.154 ns | 85.9316 ns | 80.3805 ns | 1.000 |
+| MemoryMarshallingComparison |   719.765 ns |  9.1830 ns |  8.5898 ns | 0.095 |
+|            **VectorComparison** |     1.627 ns |  0.0790 ns |  0.0700 ns | **0.000** |
